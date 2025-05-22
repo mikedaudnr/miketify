@@ -1,30 +1,30 @@
-# Smk telkom project
+# UKL Frontend - SMK Telkom Malang
 
-*Automatically synced with your [v0.dev](https://v0.dev) deployments*
+> Aplikasi web untuk Uji Kenaikan Level (UKL) 2024/2025  
+> Kompetensi: Rekayasa Perangkat Lunak (Frontend)
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/yumesan1149-gmailcoms-projects/v0-smk-telkom-project)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.dev-black?style=for-the-badge)](https://v0.dev/chat/projects/RswX5q3rRJX)
+![React](https://img.shields.io/badge/React-v18-blue) ![Axios](https://img.shields.io/badge/Axios-0.27.2-orange) ![MIT License](https://img.shields.io/badge/License-MIT-green)
 
-## Overview
+## ✨ Fitur
 
-This repository will stay in sync with your deployed chats on [v0.dev](https://v0.dev).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.dev](https://v0.dev).
+1. **Login Page**  
+   - `POST https://dummyjson.com/auth/login`  
+   - Input: `username`, `password`  
+   - Menyimpan `accessToken`/`refreshToken` dan menampilkan data user
 
-## Deployment
+2. **Playlist Page**  
+   - `GET https://learn.smktelkom-mlg.sch.id/ukl2/playlists`  
+   - Menampilkan daftar playlist: `playlist_name`, `song_count`
 
-Your project is live at:
+3. **Song List Page**  
+   - `GET https://learn.smktelkom-mlg.sch.id/ukl2/playlists/song-list/[playlist_id]?search=keyword`  
+   - Cari berdasarkan judul atau artis  
+   - Daftar lagu per playlist
 
-**[https://vercel.com/yumesan1149-gmailcoms-projects/v0-smk-telkom-project](https://vercel.com/yumesan1149-gmailcoms-projects/v0-smk-telkom-project)**
+4. **Song Detail Page**  
+   - `GET https://learn.smktelkom-mlg.sch.id/ukl2/playlists/song/[song_id]`  
+   - Menampilkan video, judul, artis, deskripsi, likes, dan komentar
 
-## Build your app
-
-Continue building your app on:
-
-**[https://v0.dev/chat/projects/RswX5q3rRJX](https://v0.dev/chat/projects/RswX5q3rRJX)**
-
-## How It Works
-
-1. Create and modify your project using [v0.dev](https://v0.dev)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+5. **Tambah Lagu Baru**  
+   - `POST https://learn.smktelkom-mlg.sch.id/ukl2/playlists/song`  
+   - Form data: `title`, `artist`, `description`, `source`, `thumbnail` (JPG/PNG ≤ 2 MB)
